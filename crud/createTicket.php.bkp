@@ -1,0 +1,41 @@
+<?php
+// Sessão
+session_start();
+// Conexão
+require_once '../conn.php';
+// Clear
+function limpar($entrada) {
+	global $conexao;
+	// sql
+	$var = pg_escape_string($conexao, $entrada);
+	// xss
+	$var = htmlspecialchars($var);
+	return $var;
+} 
+
+if(isset($_POST['btn-cadastrar'])){
+        $nro_pedido = $_REQUEST['nro_pedido'];
+        $cod_usuario = "um553039";
+	$inicio = $_POST["periodo_ini_pedido"];
+	$fim = $_POST["periodo_fim_pedido"];
+	$obs = $_POST["justif_pedido"];
+	$destino = $_POST["destino_pedido"];
+	$vlr_total = $_POST["vlr_total_pedido"];
+	$data_pedido = date("Y-m-d");
+        $cod_etapa=1;
+        $status = 1;
+        $cod_empresa = $_POST['empresa'];
+
+	$sql = "insert into tb_pedidos (cod_pedido, cod_solicitante, data_pedido, periodo_ini_pedido, periodo_fim_pedido, justif_pedido, destino_pedido, vlr_total_pedido, status_pedido, cod_etapa, cod_empresa) "
+                . "values('$nro_pedido', '$cod_usuario', '$data_pedido', '$inicio', '$fim', '$obs', '$destino', '$vlr_total', '$status', '$cod_etapa', '$cod_empresa')";
+
+	if(pg_query($sql)){
+		$_SESSION['mensagem'] = "Pedido cadastrado com sucesso!";
+		header('Location: ../pedidos.php');
+
+	}
+	else {
+		$_SESSION['mensagem'] = "Erro ao cadastrar. ".$erro= pg_last_error();;
+//		header('Location: ../pedidos.php');
+	}
+}
