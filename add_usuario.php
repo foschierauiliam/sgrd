@@ -18,7 +18,11 @@ include_once 'bases/cabecalho.php';
                 <select name="perfil" id="perfil">
                     <option value="" name="">--Selecione o perfil--</option>
                     <?php
-                    $sql = "select * from tb_perfis order by desc_perfil";
+                    $sql = "select * from tb_perfis";
+                    if ($cod_perfil != 6) {
+                        $sql .= " where cod_perfil != 6";
+                    }
+                    $sql .= " order by desc_perfil";
                     $result_perfis = pg_query($conexao, $sql) or die("Não foi possível conectar-se ao banco de dados PostgreSQL. Erro: " . pg_last_error());
                     if ($result_perfis) {
                         while ($row = pg_fetch_array($result_perfis)) {
