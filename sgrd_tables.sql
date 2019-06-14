@@ -467,6 +467,11 @@ INSERT INTO tb_tipo_item VALUES (12, 'Telefone');
 INSERT INTO tb_tipo_item VALUES (18, 'Reembolso de cliente');
 
 
+INSERT INTO tb_usuario VALUES ('mm446021', 'Master', 'Master', 6, 22, 2, '$2y$10$LYujCLQxhi7s0WFZll8h0eiyne0lOF6DcPMimQfJP6TKjuLPh36La', 'contato@pinginformatica.com.br', '729.544.460-21',
+1);
+
+
+
 --
 -- Name: tb_tipo_item_cod_tipo_item_seq; Type: SEQUENCE SET; Schema: public; Owner: svc_sgrd
 --

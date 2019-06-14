@@ -111,7 +111,7 @@
                                 </center>
                                 <div class="section"></div>
                                 <div class="row">
-                                    <a class="black-text" href="tutorial.html" target="_blank">Tutorial</a>
+                                    <a class="black-text" href="tutorial.php" target="_blank">Tutorial</a>
                                 </div>
                             </form>
                         </div>
