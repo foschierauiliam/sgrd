@@ -54,7 +54,7 @@
                 <br />
                 <li><b><em>Empresas</em></b> - No momento da implementação deste sistema, 4 empresas estão pré cadastradas. A empresa fictícia "SGRD - Desenvolvimento de Software Ltda" possui a função de "gerenciar" a aplicação, contendo um usuário perifl Master, para a realização da primeira das etapas - cadastrar nova empresa e criar um usuário "Administrador" para esta empresa. Conforme citado anteriormente, apesar de ser possível o procedimento ser realizado com o perfil "Master", é de responsabilidade do novo usuário de perfil "Administrador" cadastrar os usuários da sua empresa conforme escopos/competências;</li>
                 <ul>
-                    <li><i class="material-icons tiny orange-text">warning</i> Para fins de demonstração, o login de perfil Master é: "<b>mm446021</b>", e sua senha é: "<b>d3spes@</b>"</li>
+                    <li><i class="material-icons tiny orange-text">warning</i> Para fins de demonstração, o login de perfil Master é: "<b>mm446021</b>", e sua senha é: "<b>d3sp3s@</b>"</li>
                 </ul>
                 <br />
                 <li>Após o logon com sucesso, o usuário é redirecionado para a página inicial, onde são exibidos resumos, conforme perfil:</li>
